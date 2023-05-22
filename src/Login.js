@@ -9,16 +9,16 @@ export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
-    }
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log(email);
+    // }
 
     async function submit(e){
         e.preventDefault();
 
         try{
-            await axios.post("http://localhost:3000/", {
+            await axios.post("http://localhost:3001/", {
                 email, pass
             })
             .then(res=>{

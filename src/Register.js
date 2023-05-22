@@ -32,31 +32,48 @@ export const Register = (props) => {
         })
     }
 
-    function submit(event) {
-        event.preventDefault();
+    // function submit(event) {
+    //     event.preventDefault();
+    //     const newInfo = {
+    //         email: input.email,
+    //         password: input.password,
+    //         username: input.username
+    //     }
+    //     console.log("no")
+    //     axios.post('http://localhost:3001/register', newInfo)
+        
+            
+        
+        
+    // }
+
+    function submit(e){
+        e.preventDefault();
         const newInfo = {
             email: input.email,
             password: input.password,
-            username: input.username
+
         }
-        axios.post('http://localhost:3001/register', newInfo)
-        
+        axios.post("http://localhost:3001/register", newInfo)
+        .then(res=>{
+            if(res.data==="exist"){
+                console.log("exists");
+                alert("User already exists");
+            }
+            else{
+                history("/transfer");
+            }
+        })
     }
-
-    // async function submit(e){
-    //     e.preventDefault();
-
     //     try{
-    //         console.log(email);
-    //         console.log(pass);
-    //         await axios.post("http://localhost:3000/register", {
-    //             email, pass
-    //         })
+            
+            
     //         .then(res=>{
     //             if(res.data==="exist"){
     //                 alert("User already exists")
     //             }
     //             else if(res.data==="not exist"){
+    //                 newInfo.save();
     //                 history("/transfer")
     //             }
     //         })
@@ -86,7 +103,7 @@ export const Register = (props) => {
                     <input value={input.password} onChange={handleChange} type="password" placeholder="********" id="password" name="password" />
                     <button type="submit" onClick={submit}>Submit</button>
                 </form>
-                <Link to='/register'>Already have an account? Login here</Link>
+                <Link to='/'>Already have an account? Login here</Link>
             </div>
         </div>
     )
