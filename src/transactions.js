@@ -2,6 +2,7 @@ import React from 'react'
 import './ReactTable.css'
 import { Heading } from './Heading'
 import { TransactionsHeading } from './transactionsHeading'
+import { Navbar } from './Navbar'
 
 const ReactTable = () => {
     const data =[
@@ -22,6 +23,7 @@ const ReactTable = () => {
     ]
   return (
     <>
+    <Navbar />
     <TransactionsHeading/>
     <div className='table'>
       <table className='table-container'>

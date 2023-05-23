@@ -1,8 +1,10 @@
 import React from 'react'
+import { Navbar } from './Navbar'
 
-const balance = () => {
+ export const Balance = () => {
   return (
     <>
+        <Navbar />
         <div className='App'>
             <div className='auth-form-container'>
                 <form className="transfer" >
@@ -18,4 +20,4 @@ const balance = () => {
   )
 }
 
-export default balance
+// export default Balance;

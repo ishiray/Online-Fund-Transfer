@@ -9,7 +9,7 @@ const CenteredForm = () => {
     
     return (
         <>
-        
+        <Navbar />
         <CenteredFormHeading/>
         <div className="App">
             <div className="auth-form-container">

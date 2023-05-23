@@ -5,24 +5,21 @@ import { Heading } from './Heading';
 import TransferForm from "./TransferForm";
 
 export const Transfer = () => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    // const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setIsSubmitted(true);
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setIsSubmitted(true);
+    // };
     return (
         <>
+        
+        <Navbar />
         <Heading />
-        {isSubmitted ? (
-            <div>
-                <TransferForm/>
-            </div>
-        ) :(
         <div className="App">
             <div className="auth-form-container">
             
-                <form className="transfer" onSubmit={handleSubmit}>
+                <form className="transfer" >
                     <label for="text">card number</label>
                     <input type="text" placeholder="card number" id="card number" name="card number"/>
                     <label for="password">pin</label>
@@ -31,7 +28,7 @@ export const Transfer = () => {
                 </form>
             </div>
         </div>
-      )}
+      
         </>
     )
 }

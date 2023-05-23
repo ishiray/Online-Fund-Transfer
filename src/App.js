@@ -9,7 +9,7 @@ import { Register } from './Register';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CenteredForm, {submitComplaint} from './submitComplaint';
 import ReactTable from './transactions';
-import balance from './balance';
+import { Balance } from './Balance';
 
 
 {/*
@@ -53,13 +53,14 @@ function App(){
   return(
     <div>
       <Router>
-        <Navbar/>
+        
         <Routes>
-          <Route path = '/' element = {<Transfer/>} />
+          <Route path = '/transfer' element = {<Transfer/>} />
+          <Route path = '/register' element = {<Register/>} />
           <Route path = '/viewTransactions' element = {<ReactTable/>} />
-          <Route path = '/balance' element={<balance/>} />
+          <Route path = '/balance' element = {<Balance />} />
           <Route path = '/submitComplaint' element = {<CenteredForm/>}/>
-          <Route path = '/login' element = {<Login/>} />
+          <Route path = '/' element = {<Login/>} />
           
         </Routes>
       </Router>

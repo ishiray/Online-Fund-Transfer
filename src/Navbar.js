@@ -6,11 +6,11 @@ export const Navbar = () => {
         <header>
 			<h3>LOGO</h3>
 			<nav className='navbar'>
-				<Link to = '/'>Transfer</Link>
+				<Link to = '/transfer'>Transfer</Link>
 				<Link to = '/viewTransactions'>View Transactions</Link>
 				<Link to = '/balance'>View Balance</Link>
 				<Link to = '/submitComplaint' >Submit Complaints</Link>
-                <Link to = '/login'>Logout</Link>
+                <Link to = '/'>Logout</Link>
 				{/* <button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
