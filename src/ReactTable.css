@@ -1,0 +1,23 @@
+/* styles.css */
+.table{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #11113c;
+}
+.table-container {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  .table-container th,
+  .table-container td {
+    border: 2px solid white;
+    padding: 15px;
+  }
+  .table-container th,
+.table-container td {
+  color: white;
+}
+  

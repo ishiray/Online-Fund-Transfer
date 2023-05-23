@@ -1,0 +1,5 @@
+pages:
+ -view transactions =done 
+ -view balance = done
+ -submit complaint = done 
+ -transfer ka form = done

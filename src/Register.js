@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import './login.css'
 
 export const Register = (props) => {
     const history=useNavigate();
@@ -103,7 +104,7 @@ export const Register = (props) => {
                     <input value={input.password} onChange={handleChange} type="password" placeholder="********" id="password" name="password" />
                     <button type="submit" onClick={submit}>Submit</button>
                 </form>
-                <Link to='/'>Already have an account? Login here</Link>
+                <Link to='/' className="custom-link">Already have an account? Login here</Link>
             </div>
         </div>
     )

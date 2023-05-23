@@ -1,15 +1,16 @@
 import './Navbar.css'
+import {Link} from 'react-router-dom'
 
 export const Navbar = () => {
     return (
         <header>
 			<h3>LOGO</h3>
 			<nav className='navbar'>
-				<a href="/#">Transfer</a>
-				<a href="/#">View Transactions</a>
-				<a href="/#">View Balance</a>
-				<a href="/#">Submit Complaints</a>
-                <a href="/#">Logout</a>
+				<Link to = '/'>Transfer</Link>
+				<Link to = '/viewTransactions'>View Transactions</Link>
+				<Link to = '/balance'>View Balance</Link>
+				<Link to = '/submitComplaint' >Submit Complaints</Link>
+                <Link to = '/login'>Logout</Link>
 				{/* <button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

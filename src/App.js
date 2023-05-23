@@ -7,7 +7,12 @@ import { Heading } from './Heading';
 import { Login } from './Login';
 import { Register } from './Register';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CenteredForm, {submitComplaint} from './submitComplaint';
+import ReactTable from './transactions';
+import balance from './balance';
 
+
+{/*
 function App() {
   // const [currentForm, setCurrentForm] = useState('login');
 
@@ -27,6 +32,7 @@ function App() {
       {/* {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
       } */}
+    {/*
     </div>
   );
 }
@@ -40,5 +46,26 @@ function App() {
 //     </div>
 //   );
 // }
+
+*/}
+
+function App(){
+  return(
+    <div>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path = '/' element = {<Transfer/>} />
+          <Route path = '/viewTransactions' element = {<ReactTable/>} />
+          <Route path = '/balance' element={<balance/>} />
+          <Route path = '/submitComplaint' element = {<CenteredForm/>}/>
+          <Route path = '/login' element = {<Login/>} />
+          
+        </Routes>
+      </Router>
+    </div>
+  )
+}
+
 
 export default App;
