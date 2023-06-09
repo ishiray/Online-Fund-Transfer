@@ -14,9 +14,9 @@ export const Mfa = () => {
         <Headingmfa/>
         <div className='App'>
             <div className='auth-form-container-mfa'>
-                <button type = "submit" onClick={handleButtonClick}>MFA 1</button>
-                <button type = "submit" onClick={handleButtonClick}>MFA 1</button>
-                <button type = "submit" onClick={handleButtonClick}>MFA 1</button>
+                <button type = "submit" onClick={handleButtonClick}>Email Code</button>
+                <button type = "submit" onClick={handleButtonClick}>SMS OTP</button>
+                <button type = "submit" onClick={handleButtonClick}></button>
                 <button type = "submit" onClick={handleButtonClick}>MFA 1</button>
             </div>
         </div>
