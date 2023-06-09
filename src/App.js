@@ -9,7 +9,7 @@ import { Register } from './Register';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CenteredForm, {submitComplaint} from './submitComplaint';
 import ReactTable from './transactions';
-import { Balance } from './Balance';
+import { Balance } from './balance';
 
 
 {/*

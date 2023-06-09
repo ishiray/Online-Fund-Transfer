@@ -43,7 +43,7 @@ export const Login = (props) => {
     return (
         <div className="App">
             <div className="company">
-                NAME
+                TrustTransact
             </div>
             <div className="auth-form-container">
                 <h2>Login</h2>

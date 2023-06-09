@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export const Navbar = () => {
     return (
         <header>
-			<h3>LOGO</h3>
+			<h3>TrustTransact</h3>
 			<nav className='navbar'>
 				<Link to = '/transfer'>Transfer</Link>
 				<Link to = '/viewTransactions'>View Transactions</Link>
