@@ -62,7 +62,7 @@ export const Register = (props) => {
                 alert("User already exists");
             }
             else{
-                history("/transfer");
+                history("/");
             }
         })
     }

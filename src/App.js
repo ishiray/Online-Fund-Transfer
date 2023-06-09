@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CenteredForm, {submitComplaint} from './submitComplaint';
 import ReactTable from './transactions';
 import { Balance } from './balance';
+import { Mfa } from './mfa';
 
 
 {/*
@@ -61,7 +62,7 @@ function App(){
           <Route path = '/balance' element = {<Balance />} />
           <Route path = '/submitComplaint' element = {<CenteredForm/>}/>
           <Route path = '/' element = {<Login/>} />
-          
+          <Route path = '/mfa' element = {<Mfa/>}/>
         </Routes>
       </Router>
     </div>

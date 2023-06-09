@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import './login.css'
+import './login.css';
+
 
 export const Login = (props) => {
 
@@ -24,7 +25,7 @@ export const Login = (props) => {
             })
             .then(res=>{
                 if(res.data==="exist"){
-                    history("/transfer")
+                    history('/mfa')
                 }
                 else if(res.data==="not exist"){
                     alert("User is not registered")
