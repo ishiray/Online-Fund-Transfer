@@ -1,8 +1,7 @@
-import React, {useState} from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+
 import { Navbar } from './Navbar';
 import { Heading } from './Heading';
-import TransferForm from "./TransferForm";
+
 
 export const Transfer = () => {
     // const [isSubmitted, setIsSubmitted] = useState(false);

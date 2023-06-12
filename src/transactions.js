@@ -1,6 +1,5 @@
 import React from 'react'
 import './ReactTable.css'
-import { Heading } from './Heading'
 import { TransactionsHeading } from './transactionsHeading'
 import { Navbar } from './Navbar'
 
