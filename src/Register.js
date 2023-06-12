@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { AES, enc } from 'crypto-js';
 import './login.css'
+
+const secretKey = 'Hello';
+
+const encryptData = (data) => {
+    const encryptedData = AES.encrypt(data, secretKey).toString();
+    return encryptedData;
+  };
 
 export const Register = (props) => {
     const history=useNavigate();
@@ -9,20 +17,20 @@ export const Register = (props) => {
     // const [email, setEmail] = useState('');
     // const [pass, setPass] = useState('');
     // const [name, setName] = useState('');
-
     const [input, setInput] = useState({
         
         email: '',
         password: '',
-        username: ''
+        username: '',
+        number:'',
+        account:'',
+        pin:''
         
     })
-
     // const handleSubmit = (e) => {
     //     e.preventDefault();
     //     console.log(email);
     // }
-
     function handleChange(event) {
         const {name, value} = event.target;
         setInput(prevInput => {
@@ -32,7 +40,6 @@ export const Register = (props) => {
             }
         })
     }
-
     // function submit(event) {
     //     event.preventDefault();
     //     const newInfo = {
@@ -50,13 +57,19 @@ export const Register = (props) => {
 
     function submit(e){
         e.preventDefault();
+        const encryptedPin = encryptData(input.pin);
+        console.log(1);
         const newInfo = {
             email: input.email,
             password: input.password,
+            number: input.number,
+            account: input.account,
+            pin: encryptedPin
 
         }
         axios.post("http://localhost:3001/register", newInfo)
         .then(res=>{
+            console.log(3);
             if(res.data==="exist"){
                 console.log("exists");
                 alert("User already exists");
@@ -87,13 +100,12 @@ export const Register = (props) => {
     //         console.log(e)
     //     }
     // }
-
     return (
         <div className="App">
             <div className="company">
                 TrustTransact
             </div>
-            <div className="auth-form-container">
+            <div className="auth-form">
                 <h2>Register</h2>
                 <form className="register-form">
                     <label htmlFor="username">Full name</label>
@@ -102,7 +114,14 @@ export const Register = (props) => {
                     <input value={input.email} onChange={handleChange} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
                     <label htmlFor="password">password</label>
                     <input value={input.password} onChange={handleChange} type="password" placeholder="********" id="password" name="password" />
+                    <label htmlFor="phone number">phone number</label>
+                    <input value={input.number} onChange={handleChange} placeholder="+91" id="number" name="number" />
+                    <label htmlFor="account number">account number</label>
+                    <input value={input.text} onChange={handleChange} placeholder="account number" id="account" name="account" />
+                    <label htmlFor="pin">pin</label>
+                    <input value={input.hidden} onChange={handleChange} type="password" placeholder="****" id="pin" name="pin" />
                     <button type="submit" onClick={submit}>Submit</button>
+                    
                 </form>
                 <Link to='/' className="custom-link">Already have an account? Login here</Link>
             </div>
