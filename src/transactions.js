@@ -30,9 +30,9 @@ const ReactTable = () => {
             <tr>
                 <th>Name</th>
                 <th>Account Nymber</th>
-                <th>phone no</th>
-                <th>bank</th>
-                <th>branch</th>
+                <th>Phone no</th>
+                <th>Bank</th>
+                <th>Branch</th>
             </tr>
         </thead>
         <tbody>

@@ -18,7 +18,19 @@ const newSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    number:{
+        type:String,
+        required:true
+    },
+    account:{
+        type:String,
+        required:true
+    },
+    pin:{
+        type:String,
+        required:true
+    },
 })
 
 const collection = mongoose.model("collection", newSchema);

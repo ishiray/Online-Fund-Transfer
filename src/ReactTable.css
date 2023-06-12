@@ -1,14 +1,19 @@
 /* styles.css */
 .table{
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #11113c;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 20rem;
 }
 .table-container {
     border: 1px solid black;
     border-collapse: collapse;
+    padding: 0;
+    margin: 0;
   }
   
   .table-container th,

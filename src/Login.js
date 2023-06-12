@@ -10,6 +10,9 @@ export const Login = (props) => {
 
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const [number, setNumber] = useState('');
+    const [account, setAccount] = useState('');
+    const [pin, setPin] = useState('');
 
     // const handleSubmit = (e) => {
     //     e.preventDefault();
@@ -21,7 +24,7 @@ export const Login = (props) => {
 
         try{
             await axios.post("http://localhost:3001/", {
-                email, pass
+                email, pass, number, account, pin
             })
             .then(res=>{
                 if(res.data==="exist"){
